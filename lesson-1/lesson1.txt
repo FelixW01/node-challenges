@@ -1,0 +1,35 @@
+1. What content is included in pdf guide ?
+Lecture notes, documentation, brief summary of why people use node.js
+--------------------------------------------------------------------------------------------------
+2. How do you install NodeJS, check if it's installed and check its version?
+Install it from the website and use node -v to check its version.
+--------------------------------------------------------------------------------------------------
+3. What were the limitations of JS before Node, and what does Node allow us to do with JS?
+Javascript only exists in the browser/client, Node changes all that. Allows the use of JS in the server-side backend.
+--------------------------------------------------------------------------------------------------
+4. What is Node, how does it work with the V8 engine, and how does it compare the Chrome browser?
+Node.js is a JavaScript runtime build on Chrome’s V8 JavaScript engine. Uses event-driven, non blocking I/O model that makes it lightweight and efficient. Takes in JS code and compile it to machine code, V8 is written in CSS. Access to global instead of window, no DOM access,
+Lots of methods and properties.
+--------------------------------------------------------------------------------------------------
+5. What are REPL statements and how do you run them in Node?
+Read - Reads the user input
+Evaluate - Evaluates the input as JS code
+Print - Prints the result of evaluation
+Loop - Repeats the process for next input
+To run, type node then enter. Then you can write JS code directly.
+--------------------------------------------------------------------------------------------------
+6. What does I/O mean and what is the benefit of Node’s non-blocking I/O model?
+Why do people choose to learn Node?
+Uses non-blocking Input/output model that makes it lightweight and efficient
+Non blocking = While node is waiting for a response, it can do other things
+If you’re trying to fill 4 balloons would you rather fill it up 1 by one or stick a hose that extends 4 way to fill the balloon at once
+--------------------------------------------------------------------------------------------------
+7. How do you run JS scripts on Node?
+Run node script.js on terminal
+--------------------------------------------------------------------------------------------------
+8. How do you import Core Node modules?
+Using the ‘require’ function, ex; const fs = require(‘fs);
+--------------------------------------------------------------------------------------------------
+9. How do you create and import your own modules?
+Module.exports = function
+On your app.js, const getNotes = require(‘./notes.js”)

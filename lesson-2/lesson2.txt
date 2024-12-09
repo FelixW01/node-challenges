@@ -1,0 +1,21 @@
+1. What is process.argv, and what are some uses for it. 
+A method to the process object, stands for argument vector
+Array that contains all the arguments provided
+Used to grab all the arguments passed from command line
+--------------------------------------------------------------------------------------------------
+2. What is Yargs, why is it useful, and how can you use it to accept inputs from the user?
+Yargs is node.js library used for parsing the command line arguments, replaces process obj
+It’s useful because it displays more information. You are able to add a title and the command, in a form of an object to be able to be accessed easily
+--------------------------------------------------------------------------------------------------
+3. How do you add options to commands with Yargs? How do you make those options required or optional? How do you set option types?
+You use the yargs command by doing command method.
+You can add the command, describe, handler, builder, etc
+To make the options required, you do use demandOption: true
+By using the option method
+--------------------------------------------------------------------------------------------------
+4. How do you save data?
+Use FS to save the data into a file
+fs.writeFileSync(‘1-json.json’, bookJSON’)
+fs.readFileSync(‘1-json.json’).toString() to read it
+Then json.parse to turn it into a JSON
+If you don’t turn it into string, it returns buffer data

@@ -1,0 +1,34 @@
+1. What are the call stack, callback queue, and event loop? How do they relate to each other?
+Call stack
+Simple data structure provided by v8 engine
+Track execution of our program, keeps track of functions that are currently running
+
+Callback queue
+Maintain a list of all the callback functions that are ready to be executed
+When a given event is done, the callback function gets sent to the callback queue which will execute the front item
+Sent to the call stack to run
+--------------------------------------------------------------------------------------------------
+2. When do functions move to the callback queue? When do they leave the callback queue?
+Moves when a given event is done, it will leave the callback queue as the functions get executed from the first to the last
+Sent to the call stack to run
+--------------------------------------------------------------------------------------------------
+3. What is an HTTP request, and how do you make them?
+A communication between a client (typically a web browser or app) and a server,
+Using Fetch API in JavaScript
+--------------------------------------------------------------------------------------------------
+4. What is an API key and how is it related to HTTP requests?
+API key is your unique key to call the API, you usually include your api key into the http request to be able to authenticate the call
+--------------------------------------------------------------------------------------------------
+5. How do you add resilience to your HTTP requests?
+Implement strategies to handle failures like try catch, ensure the application remains functional
+--------------------------------------------------------------------------------------------------
+6. What are callback functions and why are they useful?
+Function you define and pass in as an argument to another function with the intention of having it called later on
+Useful because they can be dynamically called at a specific time
+Non blocking, since it’s not being called right away
+--------------------------------------------------------------------------------------------------
+7. How do you make a callback function?
+Create the function and call it as an argument
+--------------------------------------------------------------------------------------------------
+8. What does encodeURIComponent() do and why is it useful?
+Encodes URI makes sure the query parameters are valid, ensures data can be safely included in URL as a query parameter
