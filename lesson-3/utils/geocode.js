@@ -1,7 +1,8 @@
 const request = require('postman-request');
+require('dotenv').config()
 
 const geocode = (adress, callback) => {
-    const accessToken = "pk.eyJ1IjoiZmVsaXh3aWxsZW0iLCJhIjoiY2xneWRxN2thMDhqeTNscGlxazZteDd3NSJ9.-h_-S4qFSy_pnbqneET0IA";
+    const accessToken = process.env.GEO_API_KEY;
     const apiUrl = `https://api.mapbox.com/search/geocode/v6/forward?country=us&place=${encodeURIComponent(adress)}&access_token=${accessToken}`;
 
     request({ url: apiUrl, json: true }, (err, {body}) => {
