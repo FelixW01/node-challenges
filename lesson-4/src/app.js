@@ -53,18 +53,20 @@ app.get('/help/*', (req, res) => {
 
 
 app.get('/weather', (req, res) => {
-    if (!req.query.address) {
+    const { address, unit } = req.query;
+
+    if (!address) {
         return res.send({
             error: 'You must provide an address!'
         })
     } 
 
-    geocode(req.query.address, (err, { latitude, longitude, location }) => {
+    geocode(address, (err, { latitude, longitude, location }) => {
         if (err) {
             return res.send({ err })
         }
 
-        forecast(latitude, longitude, (err, forecastData) => {
+        forecast(latitude, longitude, unit, (err, forecastData) => {
             if (err) {
                 return res.send({ err })
             }
@@ -72,7 +74,7 @@ app.get('/weather', (req, res) => {
             res.send({
                 forecast: forecastData,
                 location,
-                address: req.query.address
+                address: address
             })
         })
     })
