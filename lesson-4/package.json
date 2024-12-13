@@ -1,18 +1,23 @@
 {
-  "name": "lesson-4",
+  "name": "weatherbuddy",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A fullstack project leveraging weather, geolocation api",
+  "main": "src/app.js",
   "scripts": {
-    "start": "node src/app.js"
+    "start": "node src/app.js",
+    "build": "npm install",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Your Name",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "hbs": "^4.2.0",
     "postman-request": "^2.88.1-postman.40"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }
